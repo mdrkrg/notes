@@ -1,6 +1,11 @@
 import type { DefaultTheme } from 'vitepress'
 import { getNavItems, noteRootDir } from '../composables/files'
+
 // TODO: come up with alternative ways to sort files
+
+/**
+ * Sidebar option for vitepress defineConfig
+ */
 export const sidebar: DefaultTheme.Sidebar = [
   {
     text: 'Computer Science & Software Engineering',
@@ -55,12 +60,12 @@ export const sidebar: DefaultTheme.Sidebar = [
           }
         ]
       },
-      {
-        text: 'Nand to Tetris',
-        collapsed: true,
-        link: '/pages/coding/nand2tetris/info',
-        items: await getNavItems(`${noteRootDir}/coding/nand2tetris/src/`)
-      },
+      // {
+      //   text: 'Nand to Tetris',
+      //   collapsed: true,
+      //   link: '/pages/coding/nand2tetris/info',
+      //   items: await getNavItems(`${noteRootDir}/coding/nand2tetris/src/`)
+      // },
     ]
   },
   {
