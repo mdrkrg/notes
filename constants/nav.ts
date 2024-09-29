@@ -72,6 +72,11 @@ export const sidebar: DefaultTheme.Sidebar = [
     text: 'Math',
     items: [
       {
+        text: 'Calculus I (Chinese)',
+        collapsed: true,
+        items: await getNavItems(`${noteRootDir}/math/calculus1/src/`)
+      },
+      {
         text: 'Calculus II (Chinese)',
         collapsed: true,
         items: await getNavItems(`${noteRootDir}/math/calculus2/src/`)

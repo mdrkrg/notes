@@ -19,3 +19,5 @@ Obviously, most of contents are gathered online, so if any of the contents are v
 - [**markdown-it-bi-directional-links**](https://github.com/nolebase/integrations) - Obsidian-like bi-directional links `[[filename]]`
 - [**vitepress-plugin-inline-link-preview**](https://github.com/nolebase/integrations) - Obsidian-like link previw
 - [**mermaid**](https://mermaid.js.org/) - Displaying charts (not added)
+
+A bit of notes on markdown extension: The note files are basically hard linked to the original files in my note repo, so I will only try to adapt the syntax of markdown extension that are used in Obsidian, to Vitepress, but not vise versa.
