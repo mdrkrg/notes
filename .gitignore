@@ -1,6 +1,8 @@
 # Vite build and cache
 .vitepress/dist/
 .vitepress/cache/
+!.vitepress/
+!config.mts
 
 # Logs
 logs
