@@ -1,6 +1,6 @@
 Calculus I
 ===
-These are course notes for SJTU Math1201.
+These are course notes for SJTU MATH1201.
 
 I struggled in this course and got B-. This is where all the nightmare starts.
 

@@ -9,10 +9,10 @@ hero:
   actions:
     - theme: brand
       text: Table of Contents
-      link: /toc
+      link: /pages/toc
     - theme: alt
       text: About Me
-      link: /about-me
+      link: /pages/about-me
     - theme: alt
       text: Github
       link: https://github.com/mdrkrg

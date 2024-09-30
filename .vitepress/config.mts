@@ -37,8 +37,8 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Table of Contents', link: '/toc' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: 'Table of Contents', link: '/pages/toc' },
+      { text: 'Examples', link: '/pages/markdown-examples' }
     ],
 
     // TODO: Consider adding script to compose sidebar items

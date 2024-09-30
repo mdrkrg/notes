@@ -73,11 +73,13 @@ export const sidebar: DefaultTheme.Sidebar = [
     items: [
       {
         text: 'Calculus I (Chinese)',
+        link: '/pages/math/calculus1/info',
         collapsed: true,
         items: await getNavItems(`${noteRootDir}/math/calculus1/src/`)
       },
       {
         text: 'Calculus II (Chinese)',
+        link: '/pages/math/calculus2/info',
         collapsed: true,
         items: await getNavItems(`${noteRootDir}/math/calculus2/src/`)
       },
@@ -86,8 +88,8 @@ export const sidebar: DefaultTheme.Sidebar = [
   {
     text: 'Examples',
     items: [
-      { text: 'Markdown Examples', link: '/markdown-examples' },
-      { text: 'Runtime API Examples', link: '/api-examples' }
+      { text: 'Markdown Examples', link: '/pages/markdown-examples' },
+      { text: 'Runtime API Examples', link: '/pages/api-examples' }
     ]
   },
 ]
