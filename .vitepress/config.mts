@@ -4,6 +4,7 @@ import {
   InlineLinkPreviewElementTransform
 } from '@nolebase/vitepress-plugin-inline-link-preview/markdown-it'
 import Mark from 'markdown-it-mark'
+import Callout from 'markdown-it-obsidian-callouts'
 import { withMermaid } from 'vitepress-plugin-mermaid'
 import { sidebar } from '../constants/nav'
 
@@ -18,6 +19,7 @@ export default defineConfig({
       md.use(BiDirectionalLinks())
       md.use(InlineLinkPreviewElementTransform)
       md.use(Mark)
+      md.use(Callout)
     },
   },
   vite: {

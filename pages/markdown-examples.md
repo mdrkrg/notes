@@ -80,6 +80,28 @@ This is a dangerous warning.
 This is a details block.
 :::
 
+The following uses `markdown-it-obsidian-callout`, and I have [my own contributions](https://github.com/ebullient/markdown-it-obsidian-callouts/pull/62)
+
+> [!example]+ This is an example
+> I'm hidden!
+
+> [!summary]- This is a summary
+> Oh now you see me
+> > [!info]- This is an info
+> > I'm even more hidden
+
+> [!NOTE]+
+> Hello World!
+> ~~~ad-warning
+> title: a warning
+> This is a nested warning callout
+> ~~~
+
+> [!example] Without content (originally buggy)
+
+> [!summary] This is a summary without details
+> I'm a plain callout
+
 ## More
 
 Check out the documentation for the [full list of markdown extensions](https://vitepress.dev/guide/markdown).

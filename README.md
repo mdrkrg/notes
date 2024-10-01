@@ -15,7 +15,7 @@ Obviously, most of contents are gathered online, so if any of the contents are v
 ## Dependencies
 - [**markdown-it-mark**](https://github.com/markdown-it/markdown-it-mark) - Obsidian and HackMd flavoured `==highlighting==`
 - [**markdown-it-mathjax3**](https://github.com/tani/markdown-it-mathjax3) - inline and block math equations
-- [**remark-callout**](https://github.com/r4ai/remark-callout) - Obsidian flavoured callouts `> [!example] Example Title`
+- [**markdown-it-obsidian-callouts**](https://github.com/ebullient/markdown-it-obsidian-callouts) - Obsidian flavoured callouts `> [!example] Example Title`
 - [**markdown-it-bi-directional-links**](https://github.com/nolebase/integrations) - Obsidian-like bi-directional links `[[filename]]`
 - [**vitepress-plugin-inline-link-preview**](https://github.com/nolebase/integrations) - Obsidian-like link previw
 - [**mermaid**](https://mermaid.js.org/) - Displaying charts (not added)
