@@ -9,45 +9,51 @@ import { withMermaid } from 'vitepress-plugin-mermaid'
 import { sidebar } from '../constants/nav'
 
 // https://vitepress.dev/reference/site-config
-export default defineConfig({
-  title: "Kurage Notes",
-  description: "A static site to showcase my notes.",
-  base: '/notes/',
-  markdown: {
-    math: true,
-    config: (md) => {
-      md.use(BiDirectionalLinks())
-      md.use(InlineLinkPreviewElementTransform)
-      md.use(Mark)
-      md.use(Callout)
+export default withMermaid(
+  defineConfig({
+    title: "Kurage Notes",
+    description: "A static site to showcase my notes.",
+    base: '/notes/',
+    markdown: {
+      math: true,
+      config: (md) => {
+        md.use(BiDirectionalLinks())
+        md.use(InlineLinkPreviewElementTransform)
+        md.use(Mark)
+        md.use(Callout)
+      },
     },
-  },
-  vite: {
-    optimizeDeps: {
-      exclude: [
-        '@nolebase/vitepress-plugin-inline-link-preview/client',
+    vite: {
+      optimizeDeps: {
+        exclude: [
+          '@nolebase/vitepress-plugin-inline-link-preview/client',
+          'mermaid',
+          'vitepress-plugin-mermaid',
+        ],
+      },
+      ssr: {
+        noExternal: [
+          // If there are other packages that need to be processed by Vite, you can add them here.
+          '@nolebase/vitepress-plugin-inline-link-preview',
+          'mermaid',
+          'vitepress-plugin-mermaid',
+        ],
+      },
+    },
+    themeConfig: {
+      // https://vitepress.dev/reference/default-theme-config
+      nav: [
+        { text: 'Home', link: '/' },
+        { text: 'Table of Contents', link: '/pages/toc' },
+        { text: 'Examples', link: '/pages/markdown-examples' }
       ],
-    },
-    ssr: {
-      noExternal: [
-        // If there are other packages that need to be processed by Vite, you can add them here.
-        '@nolebase/vitepress-plugin-inline-link-preview',
-      ],
-    },
-  },
-  themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
-    nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Table of Contents', link: '/pages/toc' },
-      { text: 'Examples', link: '/pages/markdown-examples' }
-    ],
 
-    // TODO: Consider adding script to compose sidebar items
-    sidebar: sidebar,
+      // TODO: Consider adding script to compose sidebar items
+      sidebar: sidebar,
 
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/mdrkrg' }
-    ]
-  }
-})
+      socialLinks: [
+        { icon: 'github', link: 'https://github.com/mdrkrg' }
+      ]
+    }
+  })
+)
