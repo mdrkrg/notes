@@ -1,6 +1,7 @@
 Table of Contents
 ===
 ## Computer Science
+### [[pages/coding/cs61b/info|CS61B]]
 ### [[pages/coding/cs61c/info|CS61C]]
 
 ## Math

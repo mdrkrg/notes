@@ -11,6 +11,25 @@ export const sidebar: DefaultTheme.Sidebar = [
     text: 'Computer Science & Software Engineering',
     items: [
       {
+        text: 'CS61B',
+        link: '/pages/coding/cs61b/info',
+        collapsed: true,
+        items: [
+          {
+            text: 'Java',
+            items: await getNavItems(`${noteRootDir}/coding/cs61b/src/java/`),
+          },
+          {
+            text: 'OOP',
+            items: await getNavItems(`${noteRootDir}/coding/cs61b/src/oop/`),
+          },
+          {
+            text: 'Data Structures',
+            items: await getNavItems(`${noteRootDir}/coding/cs61b/src/ds/`),
+          },
+        ]
+      },
+      {
         text: 'CS61C',
         link: '/pages/coding/cs61c/info',
         collapsed: true,
