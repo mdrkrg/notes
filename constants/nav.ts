@@ -11,37 +11,78 @@ export const sidebar: DefaultTheme.Sidebar = [
     text: 'Computer Science & Software Engineering',
     items: [
       {
-        text: 'CS106B',
+        text: 'CS61A: Structure and Interpretation of Computer Programs',
+        link: '/pages/coding/cs61a/info',
+        collapsed: true,
+        items: [
+          {
+            text: 'Python',
+            collapsed: true,
+            items: await getNavItems(`${noteRootDir}/coding/cs61a/src/python`),
+          },
+          {
+            text: 'Programming Ideas',
+            collapsed: true,
+            items: await getNavItems(`${noteRootDir}/coding/cs61a/src/programming`),
+          },
+          {
+            text: 'Object Oriented Programming',
+            collapsed: true,
+            items: await getNavItems(`${noteRootDir}/coding/cs61a/src/oop`),
+          },
+          {
+            text: 'Data Structures',
+            collapsed: true,
+            items: await getNavItems(`${noteRootDir}/coding/cs61a/src/ds`),
+          },
+          {
+            text: 'Scheme',
+            collapsed: true,
+            items: await getNavItems(`${noteRootDir}/coding/cs61a/src/scheme`),
+          },
+          {
+            text: 'Labs and HW Reflection',
+            collapsed: true,
+            items: await getNavItems(`${noteRootDir}/coding/cs61a/src/labs`),
+          },
+        ]
+      },
+      {
+        text: 'CS106B: Programming Abstractions in C++',
         link: '/pages/coding/cs106b/info',
         collapsed: true,
         items: await getNavItems(`${noteRootDir}/coding/cs106b/src/`),
       },
       {
-        text: 'CS61B',
+        text: 'CS61B: Data Structures and Algorightm',
         link: '/pages/coding/cs61b/info',
         collapsed: true,
         items: [
           {
             text: 'Java',
+            collapsed: true,
             items: await getNavItems(`${noteRootDir}/coding/cs61b/src/java/`),
           },
           {
             text: 'OOP',
+            collapsed: true,
             items: await getNavItems(`${noteRootDir}/coding/cs61b/src/oop/`),
           },
           {
             text: 'Data Structures',
+            collapsed: true,
             items: await getNavItems(`${noteRootDir}/coding/cs61b/src/ds/`),
           },
         ]
       },
       {
-        text: 'CS61C',
+        text: 'CS61C: Machine Structure in C and RISC-V',
         link: '/pages/coding/cs61c/info',
         collapsed: true,
         items: [
           {
             text: 'C',
+            collapsed: true,
             items: [
               { text: 'Intro to C', link: '/pages/coding/cs61c/src/c/Intro to C' },
               { text: 'Generics', link: '/pages/coding/cs61c/src/c/Generics' },
@@ -51,6 +92,7 @@ export const sidebar: DefaultTheme.Sidebar = [
           },
           {
             text: 'RISC-V',
+            collapsed: true,
             items: [
               { text: 'Intro to RISC-V', link: '/pages/coding/cs61c/src/riscv/Intro to RISC-V' },
               { text: 'RISC-V Instructions', link: '/pages/coding/cs61c/src/riscv/RISC-V Instructions' },
@@ -61,6 +103,7 @@ export const sidebar: DefaultTheme.Sidebar = [
           },
           {
             text: 'CPU',
+            collapsed: true,
             items: [
               { text: 'Design Hierarchy', link: '/pages/coding/cs61c/src/cpu/Design Hierarchy' },
               { text: 'Combinational Logic', link: '/pages/coding/cs61c/src/cpu/Combinational Logic' },
@@ -75,6 +118,7 @@ export const sidebar: DefaultTheme.Sidebar = [
           },
           {
             text: 'Performance',
+            collapsed: true,
             items: [
               { text: 'Caches', link: '/pages/coding/cs61c/src/performance/Caches' },
               { text: 'Data-Level Parallelism (DLP)', link: '/pages/coding/cs61c/src/performance/Data-Level Parallelism (DLP)' },
