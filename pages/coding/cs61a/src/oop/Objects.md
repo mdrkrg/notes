@@ -73,7 +73,7 @@ Dot notation automatically supplies the first argument to a method. It supplies 
 100
 ```
 ### Dot Expressions
-Object reveive messages via dot notation.
+Object receive messages via dot notation.
 Dot notation access attributes of the instance or its class.
 ```python
 <expression>.<name>
@@ -88,7 +88,9 @@ Evaluates to the value of the attribute **looked up** by `<name>` in the object 
 ### Methods and Functions
 Bound methods couple together a function and the object on which that method will be invoked.
 The object will be passed in as the first argument of the method as a function
-<p align=center>Object + Function = Bound Methods</p>
+
+<p align="center">Object + Function = Bound Methods</p>
+
 ```python
 >>> Account.deposit(tom_account, 1000)
 1000
@@ -112,7 +114,7 @@ Attributes are data stored within either an instance or the class.
 		- The class has attribute `attribute`
 
 ### Looking Up Attributes by Name
-Evaluating a dot expression `<expression>.<name>:
+Evaluating a dot expression `<expression>.<name>`:
 1. Evaluate the `<expression>` to the left of the dot, which yields the object of the dot expression.
 2. `<name>` is matched against the instance attributes of that object; **if an atttribute with that name exists**, its value is returned.
 3. If not, `<name>` is looked up in the class, which yields a class attribute value.
