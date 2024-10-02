@@ -21,8 +21,8 @@ importers:
         specifier: ^4.3.2
         version: 4.3.2
       markdown-it-obsidian-callouts:
-        specifier: ^0.2.6
-        version: 0.2.6(markdown-it@14.1.0)
+        specifier: github:mdrkrg/markdown-it-obsidian-callouts#f728d77ec55b9596bb9e4e3e48837a4d1d6e6230
+        version: https://codeload.github.com/mdrkrg/markdown-it-obsidian-callouts/tar.gz/f728d77ec55b9596bb9e4e3e48837a4d1d6e6230(markdown-it@14.1.0)
       mermaid:
         specifier: ^11.2.1
         version: 11.2.1
@@ -1124,8 +1124,9 @@ packages:
   markdown-it-mathjax3@4.3.2:
     resolution: {integrity: sha512-TX3GW5NjmupgFtMJGRauioMbbkGsOXAAt1DZ/rzzYmTHqzkO1rNAdiMD4NiruurToPApn2kYy76x02QN26qr2w==}
 
-  markdown-it-obsidian-callouts@0.2.6:
-    resolution: {integrity: sha512-GCsdwEQZU+J8a+F6Gm9igzNMWdj+amkzgKMBbYoAKTkfBiaP1Vf1QkCuD3hj0R6V7qT0r9QwvPxo5AJtQdnx0A==}
+  markdown-it-obsidian-callouts@https://codeload.github.com/mdrkrg/markdown-it-obsidian-callouts/tar.gz/f728d77ec55b9596bb9e4e3e48837a4d1d6e6230:
+    resolution: {tarball: https://codeload.github.com/mdrkrg/markdown-it-obsidian-callouts/tar.gz/f728d77ec55b9596bb9e4e3e48837a4d1d6e6230}
+    version: 0.2.6
     peerDependencies:
       markdown-it: ^14.0.0
 
@@ -2918,7 +2919,7 @@ snapshots:
     transitivePeerDependencies:
       - encoding
 
-  markdown-it-obsidian-callouts@0.2.6(markdown-it@14.1.0):
+  markdown-it-obsidian-callouts@https://codeload.github.com/mdrkrg/markdown-it-obsidian-callouts/tar.gz/f728d77ec55b9596bb9e4e3e48837a4d1d6e6230(markdown-it@14.1.0):
     dependencies:
       markdown-it: 14.1.0
 

@@ -82,13 +82,15 @@ This is a details block.
 
 The following uses `markdown-it-obsidian-callout`, and I have [my own contributions](https://github.com/ebullient/markdown-it-obsidian-callouts/pull/62)
 
-> [!example]+ This is an example
+> [!example]+ **This is an example**
 > I'm hidden!
 
-> [!summary]- This is a summary
+> [!summary]- ***This is a summary***
 > Oh now you see me
 > > [!info]- This is an info
 > > I'm even more hidden
+
+> [!example] ==With `markdown-it-mark` (plugin aware)==
 
 > [!NOTE]+
 > Hello World!
@@ -96,8 +98,6 @@ The following uses `markdown-it-obsidian-callout`, and I have [my own contributi
 > title: a warning
 > This is a nested warning callout
 > ~~~
-
-> [!example] Without content (originally buggy)
 
 > [!summary] This is a summary without details
 > I'm a plain callout
