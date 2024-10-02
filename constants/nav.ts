@@ -11,6 +11,12 @@ export const sidebar: DefaultTheme.Sidebar = [
     text: 'Computer Science & Software Engineering',
     items: [
       {
+        text: 'CS106B',
+        link: '/pages/coding/cs106b/info',
+        collapsed: true,
+        items: await getNavItems(`${noteRootDir}/coding/cs106b/src/`),
+      },
+      {
         text: 'CS61B',
         link: '/pages/coding/cs61b/info',
         collapsed: true,
