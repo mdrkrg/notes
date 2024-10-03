@@ -1,6 +1,7 @@
 import type { DefaultTheme } from 'vitepress'
 import fs from 'node:fs/promises'
 import path from 'node:path'
+import process from 'node:process'
 
 /**
  * Return a list of absolute path of plain files strings given a directory
@@ -10,10 +11,10 @@ import path from 'node:path'
 async function getFiles(dir: string): Promise<string[]> {
   const dirents = await fs.readdir(dir, { withFileTypes: true })
   const files = await Promise.all(dirents.map(async (dirent) => {
-    const res = path.resolve(dir, dirent.name);
-    return (dirent.isDirectory() ? getFiles(res) : res);
-  }));
-  return Array.prototype.concat(...files);
+    const res = path.resolve(dir, dirent.name)
+    return (dirent.isDirectory() ? getFiles(res) : res)
+  }))
+  return Array.prototype.concat(...files)
 }
 
 /**
@@ -29,7 +30,7 @@ export const noteRootDir = `${cwd}/pages`
 /**
  * Return a list of sidebar navigation links given a directory of notes
  * @param dir The directory of notes to get from
- * @returns { text: filename, link: /relative/path/to/file }
+ * @returns { text: filename, link: /relative/path/to/file } The SidebarItem Object
  */
 export async function getNavItems(dir: string): Promise<DefaultTheme.SidebarItem[]> {
   const markdownFiles = await getFiles(dir)
