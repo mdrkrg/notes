@@ -2,8 +2,10 @@ import { BiDirectionalLinks } from '@nolebase/markdown-it-bi-directional-links'
 import {
   InlineLinkPreviewElementTransform,
 } from '@nolebase/vitepress-plugin-inline-link-preview/markdown-it'
+import MarkdownIt from 'markdown-it'
 import Mark from 'markdown-it-mark'
 import Callout from 'markdown-it-obsidian-callouts'
+import VitePluginDesmos from 'vite-plugin-desmos'
 import { defineConfig } from 'vitepress'
 import { withMermaid } from 'vitepress-plugin-mermaid'
 import { sidebar } from '../constants/nav'
@@ -21,9 +23,11 @@ export default withMermaid(
         md.use(InlineLinkPreviewElementTransform)
         md.use(Mark)
         md.use(Callout)
+        md.use(VitePluginDesmos)
       },
     },
     vite: {
+      plugins: [VitePluginDesmos(new MarkdownIt())],
       optimizeDeps: {
         exclude: [
           '@nolebase/vitepress-plugin-inline-link-preview/client',
@@ -37,6 +41,7 @@ export default withMermaid(
           '@nolebase/vitepress-plugin-inline-link-preview',
           'mermaid',
           'vitepress-plugin-mermaid',
+          'vite-plugin-desmos',
         ],
       },
     },

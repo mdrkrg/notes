@@ -32,6 +32,17 @@ export default {
 }
 ```
 
+## Desmos Graphs
+
+[My project](https://github.com/mdrkrg/vite-plugin-desmos)
+
+```desmos-graph
+left=-0.1;right=0.1
+top=0.1;bottom=-0.1
+---
+f(x)=\abs(x)*{\sin(1/x)}
+```
+
 ## Custom Containers
 
 **Input**

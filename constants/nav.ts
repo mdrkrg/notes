@@ -14,8 +14,8 @@ export const sidebar: DefaultTheme.Sidebar = [
       {
         text: 'Web Stuff, etc.',
         items: await getNavItems('/devnotes/typescript/'),
-      }
-    ]
+      },
+    ],
   },
   {
     text: 'Computer Science & Software Engineering',
@@ -55,7 +55,7 @@ export const sidebar: DefaultTheme.Sidebar = [
             collapsed: true,
             items: await getNavItems('/coding/cs61a/src/labs'),
           },
-        ]
+        ],
       },
       {
         text: 'CS106B: Programming Abstractions in C++',
@@ -88,7 +88,7 @@ export const sidebar: DefaultTheme.Sidebar = [
             collapsed: true,
             items: await getNavItems('/coding/cs61b/src/review/'),
           },
-        ]
+        ],
       },
       {
         text: 'CS61C: Machine Structure in C and RISC-V',
@@ -141,8 +141,8 @@ export const sidebar: DefaultTheme.Sidebar = [
               { text: 'Parallelism', link: '/pages/coding/cs61c/src/performance/Parallelism' },
               { text: 'Virtual Memory and OS', link: '/pages/coding/cs61c/src/performance/Virtual Memory and OS' },
             ],
-          }
-        ]
+          },
+        ],
       },
       {
         text: 'C',
@@ -155,7 +155,7 @@ export const sidebar: DefaultTheme.Sidebar = [
       //   link: '/pages/coding/nand2tetris/info',
       //   items: await getNavItems('/coding/nand2tetris/src/')
       // },
-    ]
+    ],
   },
   {
     text: 'Math',
@@ -164,19 +164,19 @@ export const sidebar: DefaultTheme.Sidebar = [
         text: 'Calculus I',
         link: '/pages/math/calculus1/info',
         collapsed: true,
-        items: await getNavItems('/math/calculus1/src/')
+        items: await getNavItems('/math/calculus1/src/'),
       },
       {
         text: 'Calculus II',
         link: '/pages/math/calculus2/info',
         collapsed: true,
-        items: await getNavItems('/math/calculus2/src/')
+        items: await getNavItems('/math/calculus2/src/'),
       },
       {
         text: 'Probability and Statistics',
         link: '/pages/math/probability/info',
         collapsed: true,
-        items: await getNavItems('/math/probability/src/')
+        items: await getNavItems('/math/probability/src/'),
       },
     ],
   },
@@ -184,7 +184,7 @@ export const sidebar: DefaultTheme.Sidebar = [
     text: 'Examples',
     items: [
       { text: 'Markdown Examples', link: '/pages/markdown-examples' },
-      { text: 'Runtime API Examples', link: '/pages/api-examples' }
-    ]
+      { text: 'Runtime API Examples', link: '/pages/api-examples' },
+    ],
   },
 ]
