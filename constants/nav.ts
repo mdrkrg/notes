@@ -161,16 +161,22 @@ export const sidebar: DefaultTheme.Sidebar = [
     text: 'Math',
     items: [
       {
-        text: 'Calculus I (Chinese)',
+        text: 'Calculus I',
         link: '/pages/math/calculus1/info',
         collapsed: true,
         items: await getNavItems('/math/calculus1/src/')
       },
       {
-        text: 'Calculus II (Chinese)',
+        text: 'Calculus II',
         link: '/pages/math/calculus2/info',
         collapsed: true,
         items: await getNavItems('/math/calculus2/src/')
+      },
+      {
+        text: 'Probability and Statistics',
+        link: '/pages/math/probability/info',
+        collapsed: true,
+        items: await getNavItems('/math/probability/src/')
       },
     ],
   },

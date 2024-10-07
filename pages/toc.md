@@ -2,6 +2,7 @@ Table of Contents
 ===
 ## Development
 ### [[pages/devnotes/info|Dev Notes]]
+
 ## Computer Science
 ### [[pages/coding/cs61a/info|CS61A Structure and Interpretation of Computer Programs]]
 ### [[pages/coding/cs106b/info|CS106B Programming Abstractions in C++]]
@@ -11,3 +12,4 @@ Table of Contents
 ## Math
 ### [[pages/math/calculus1/info|Calculus 1]]
 ### [[pages/math/calculus2/info|Calculus 2]]
+### [[pages/math/probability/info|Probability and Statistics]]
