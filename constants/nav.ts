@@ -18,6 +18,7 @@ export const sidebar: DefaultTheme.Sidebar = [
           {
             text: 'Python',
             collapsed: true,
+            //
             items: await getNavItems(`${noteRootDir}/coding/cs61a/src/python`),
           },
           {
@@ -45,7 +46,7 @@ export const sidebar: DefaultTheme.Sidebar = [
             collapsed: true,
             items: await getNavItems(`${noteRootDir}/coding/cs61a/src/labs`),
           },
-        ]
+        ],
       },
       {
         text: 'CS106B: Programming Abstractions in C++',
@@ -73,7 +74,7 @@ export const sidebar: DefaultTheme.Sidebar = [
             collapsed: true,
             items: await getNavItems(`${noteRootDir}/coding/cs61b/src/ds/`),
           },
-        ]
+        ],
       },
       {
         text: 'CS61C: Machine Structure in C and RISC-V',
@@ -126,8 +127,8 @@ export const sidebar: DefaultTheme.Sidebar = [
               { text: 'Parallelism', link: '/pages/coding/cs61c/src/performance/Parallelism' },
               { text: 'Virtual Memory and OS', link: '/pages/coding/cs61c/src/performance/Virtual Memory and OS' },
             ],
-          }
-        ]
+          },
+        ],
       },
       // {
       //   text: 'Nand to Tetris',
@@ -135,7 +136,7 @@ export const sidebar: DefaultTheme.Sidebar = [
       //   link: '/pages/coding/nand2tetris/info',
       //   items: await getNavItems(`${noteRootDir}/coding/nand2tetris/src/`)
       // },
-    ]
+    ],
   },
   {
     text: 'Math',
@@ -144,13 +145,13 @@ export const sidebar: DefaultTheme.Sidebar = [
         text: 'Calculus I (Chinese)',
         link: '/pages/math/calculus1/info',
         collapsed: true,
-        items: await getNavItems(`${noteRootDir}/math/calculus1/src/`)
+        items: await getNavItems(`${noteRootDir}/math/calculus1/src/`),
       },
       {
         text: 'Calculus II (Chinese)',
         link: '/pages/math/calculus2/info',
         collapsed: true,
-        items: await getNavItems(`${noteRootDir}/math/calculus2/src/`)
+        items: await getNavItems(`${noteRootDir}/math/calculus2/src/`),
       },
     ],
   },
@@ -158,7 +159,7 @@ export const sidebar: DefaultTheme.Sidebar = [
     text: 'Examples',
     items: [
       { text: 'Markdown Examples', link: '/pages/markdown-examples' },
-      { text: 'Runtime API Examples', link: '/pages/api-examples' }
-    ]
+      { text: 'Runtime API Examples', link: '/pages/api-examples' },
+    ],
   },
 ]

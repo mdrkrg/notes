@@ -1,18 +1,18 @@
-import { defineConfig } from 'vitepress'
 import { BiDirectionalLinks } from '@nolebase/markdown-it-bi-directional-links'
 import {
-  InlineLinkPreviewElementTransform
+  InlineLinkPreviewElementTransform,
 } from '@nolebase/vitepress-plugin-inline-link-preview/markdown-it'
 import Mark from 'markdown-it-mark'
 import Callout from 'markdown-it-obsidian-callouts'
+import { defineConfig } from 'vitepress'
 import { withMermaid } from 'vitepress-plugin-mermaid'
 import { sidebar } from '../constants/nav'
 
 // https://vitepress.dev/reference/site-config
 export default withMermaid(
   defineConfig({
-    title: "Kurage Notes",
-    description: "A static site to showcase my notes.",
+    title: 'Kurage Notes',
+    description: 'A static site to showcase my notes.',
     base: '/notes/',
     markdown: {
       math: true,
@@ -45,15 +45,15 @@ export default withMermaid(
       nav: [
         { text: 'Home', link: '/' },
         { text: 'Table of Contents', link: '/pages/toc' },
-        { text: 'Examples', link: '/pages/markdown-examples' }
+        { text: 'Examples', link: '/pages/markdown-examples' },
       ],
 
       // TODO: Consider adding script to compose sidebar items
-      sidebar: sidebar,
+      sidebar,
 
       socialLinks: [
-        { icon: 'github', link: 'https://github.com/mdrkrg' }
-      ]
-    }
-  })
+        { icon: 'github', link: 'https://github.com/mdrkrg' },
+      ],
+    },
+  }),
 )
