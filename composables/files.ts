@@ -29,10 +29,11 @@ export const noteRootDir = `${cwd}/pages`
 
 /**
  * Return a list of sidebar navigation links given a directory of notes
- * @param dir The directory of notes to get from
+ * @param path Path to note directory (start with '/'), relative to ${noteRootDir}
  * @returns { text: filename, link: /relative/path/to/file } The SidebarItem Object
  */
-export async function getNavItems(dir: string): Promise<DefaultTheme.SidebarItem[]> {
+export async function getNavItems(path: string): Promise<DefaultTheme.SidebarItem[]> {
+  const dir = `${noteRootDir}${path}`
   const markdownFiles = await getFiles(dir)
     .then(files => files.filter(file => file.endsWith('.md')))
     .then(files => files.map(file => file.replace(/\.md$/, '')))

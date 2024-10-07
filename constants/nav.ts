@@ -8,6 +8,16 @@ import { getNavItems, noteRootDir } from '../composables/files'
  */
 export const sidebar: DefaultTheme.Sidebar = [
   {
+    text: 'Development Notes',
+    link: '/pages/devnotes/info',
+    items: [
+      {
+        text: 'Web Stuff, etc.',
+        items: await getNavItems('/devnotes/typescript/'),
+      }
+    ]
+  },
+  {
     text: 'Computer Science & Software Engineering',
     items: [
       {
@@ -18,41 +28,40 @@ export const sidebar: DefaultTheme.Sidebar = [
           {
             text: 'Python',
             collapsed: true,
-            //
-            items: await getNavItems(`${noteRootDir}/coding/cs61a/src/python`),
+            items: await getNavItems('/coding/cs61a/src/python'),
           },
           {
             text: 'Programming Ideas',
             collapsed: true,
-            items: await getNavItems(`${noteRootDir}/coding/cs61a/src/programming`),
+            items: await getNavItems('/coding/cs61a/src/programming'),
           },
           {
             text: 'Object Oriented Programming',
             collapsed: true,
-            items: await getNavItems(`${noteRootDir}/coding/cs61a/src/oop`),
+            items: await getNavItems('/coding/cs61a/src/oop'),
           },
           {
             text: 'Data Structures',
             collapsed: true,
-            items: await getNavItems(`${noteRootDir}/coding/cs61a/src/ds`),
+            items: await getNavItems('/coding/cs61a/src/ds'),
           },
           {
             text: 'Scheme',
             collapsed: true,
-            items: await getNavItems(`${noteRootDir}/coding/cs61a/src/scheme`),
+            items: await getNavItems('/coding/cs61a/src/scheme'),
           },
           {
             text: 'Labs and HW Reflection',
             collapsed: true,
-            items: await getNavItems(`${noteRootDir}/coding/cs61a/src/labs`),
+            items: await getNavItems('/coding/cs61a/src/labs'),
           },
-        ],
+        ]
       },
       {
         text: 'CS106B: Programming Abstractions in C++',
         link: '/pages/coding/cs106b/info',
         collapsed: true,
-        items: await getNavItems(`${noteRootDir}/coding/cs106b/src/`),
+        items: await getNavItems('/coding/cs106b/src/'),
       },
       {
         text: 'CS61B: Data Structures and Algorightm',
@@ -62,19 +71,24 @@ export const sidebar: DefaultTheme.Sidebar = [
           {
             text: 'Java',
             collapsed: true,
-            items: await getNavItems(`${noteRootDir}/coding/cs61b/src/java/`),
+            items: await getNavItems('/coding/cs61b/src/java/'),
           },
           {
             text: 'OOP',
             collapsed: true,
-            items: await getNavItems(`${noteRootDir}/coding/cs61b/src/oop/`),
+            items: await getNavItems('/coding/cs61b/src/oop/'),
           },
           {
             text: 'Data Structures',
             collapsed: true,
-            items: await getNavItems(`${noteRootDir}/coding/cs61b/src/ds/`),
+            items: await getNavItems('/coding/cs61b/src/ds/'),
           },
-        ],
+          {
+            text: 'Project Reflection',
+            collapsed: true,
+            items: await getNavItems('/coding/cs61b/src/review/'),
+          },
+        ]
       },
       {
         text: 'CS61C: Machine Structure in C and RISC-V',
@@ -127,16 +141,21 @@ export const sidebar: DefaultTheme.Sidebar = [
               { text: 'Parallelism', link: '/pages/coding/cs61c/src/performance/Parallelism' },
               { text: 'Virtual Memory and OS', link: '/pages/coding/cs61c/src/performance/Virtual Memory and OS' },
             ],
-          },
-        ],
+          }
+        ]
+      },
+      {
+        text: 'C',
+        collapsed: true,
+        items: await getNavItems('/coding/c'),
       },
       // {
       //   text: 'Nand to Tetris',
       //   collapsed: true,
       //   link: '/pages/coding/nand2tetris/info',
-      //   items: await getNavItems(`${noteRootDir}/coding/nand2tetris/src/`)
+      //   items: await getNavItems('/coding/nand2tetris/src/')
       // },
-    ],
+    ]
   },
   {
     text: 'Math',
@@ -145,13 +164,13 @@ export const sidebar: DefaultTheme.Sidebar = [
         text: 'Calculus I (Chinese)',
         link: '/pages/math/calculus1/info',
         collapsed: true,
-        items: await getNavItems(`${noteRootDir}/math/calculus1/src/`),
+        items: await getNavItems('/math/calculus1/src/')
       },
       {
         text: 'Calculus II (Chinese)',
         link: '/pages/math/calculus2/info',
         collapsed: true,
-        items: await getNavItems(`${noteRootDir}/math/calculus2/src/`),
+        items: await getNavItems('/math/calculus2/src/')
       },
     ],
   },
@@ -159,7 +178,7 @@ export const sidebar: DefaultTheme.Sidebar = [
     text: 'Examples',
     items: [
       { text: 'Markdown Examples', link: '/pages/markdown-examples' },
-      { text: 'Runtime API Examples', link: '/pages/api-examples' },
-    ],
+      { text: 'Runtime API Examples', link: '/pages/api-examples' }
+    ]
   },
 ]

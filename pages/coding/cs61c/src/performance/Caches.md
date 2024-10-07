@@ -15,22 +15,17 @@ Caches
 > - Write policy
 > - Write miss policy
 > - Cache levels
->
-> `lscpu`
 
-
-Caches
-===
 > [!note] Memory Size
 > $2^{XY}$ means
 > - X = 1 => kibi ~ $10^3$
 > - X = 2 => mebi ~ $10^6$
 > - X = 3 => gebi ~ $10^9$
-> - X = 4 => tebi  ~ $10^12$
-> - X = 5 => pebi ~ $10^15$
-> - X = 6 => exbi ~ $10^18$
-> - X = 7 => zebi ~ $10^21$
-> - X = 8 => yobi ~ $10^24$
+> - X = 4 => tebi  ~ $10^{12}$
+> - X = 5 => pebi ~ $10^{15}$
+> - X = 6 => exbi ~ $10^{18}$
+> - X = 7 => zebi ~ $10^{21}$
+> - X = 8 => yobi ~ $10^{24}$
 > - Y: Multiple of 2
 
 ## Memory Hierarchy
@@ -280,6 +275,8 @@ On write hit:
 	- OS flushes cache before I/O
 - **Write-around**
 	- Data is directly written to memory only
+		- This often happens when data is only written and are not likely to be read again
+		- Seen in databases
 	- Valid bit of the block changed to invalid
 	- No write 'hit' (no data at the address get fetched in cache)
 
@@ -414,7 +411,7 @@ Rule for which block gets “cached out” on a miss.
 - Random
 	- Idea: randomly select one of the blocks in the cache to evict
 	- Works with low temporal locality of workload
-- MRU (Most Recently Used)
+- MRU (Most Recently Used), aka fetch-and-discard
 	- Idea: select the block that has been used most recently of all the block
 
 ## Average Memory Access Time (AMAT)
